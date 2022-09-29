@@ -179,7 +179,7 @@ namespace TechBoard
             for(byte i = 0; i < (byte)EngineTechpoolTypes.Count; i++)
             {
                 engType = (EngineTechpoolTypes)i;
-                value = Math.Round(_engineSliders[i].Value, 1);
+                value = Math.Round(_engineSliders[i].Value, 0);
                 engineTP.Add(engType, value);
             }
 
@@ -191,7 +191,7 @@ namespace TechBoard
             for (byte i = 0; i < (byte)CarTechpoolTypes.Count; i++)
             {
                 carType = (CarTechpoolTypes)i;
-                value = Math.Round(_carSliders[i].Value, 1);
+                value = Math.Round(_carSliders[i].Value, 0);
                 carTP.Add(carType, value);
             }
 
