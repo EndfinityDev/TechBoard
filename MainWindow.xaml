@@ -1,0 +1,270 @@
+﻿<Window x:Class="TechBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TechBoard"
+        mc:Ignorable="d"
+        Title="TechBoard" Height="542" Width="1059" MinWidth="900" MinHeight="317">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Header="Engine Tech" Grid.Row="0" >
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Family" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="EngineArchitechtureSlider" Grid.Column="1" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="EngineArchitechtureTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Bottom End" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="BottomEndSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="BottomEndTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Top End" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="TopEndSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="TopEndTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Aspiration" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="AspirationSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="AspirationTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Fuel System" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="FuelSystemSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="FuelSystemTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Exhaust" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="ExhaustSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="EngineSliderUpdated"/>
+                    <TextBox x:Name="ExhaustTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Header="Car Tech" Grid.Row="0" >
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Body" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="BodySlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="BodyTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Chassis" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="ChassisSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="ChassisTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Interior" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="InteriorSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="InteriorTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Assists" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="AssistsSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="AssistsTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Safety" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="SafetySlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="SafetyTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Drivetrain" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="DrivetrainSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="DrivetrainTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Tyres" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="TyresSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="TyresTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Brakes" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="BrakesSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="BrakesTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Aero" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="AeroSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="AeroTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Suspension" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="SuspensionSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="CarSliderUpdated"/>
+                    <TextBox x:Name="SuspensionTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="0" Header="Adjust all" Grid.Row="1" Grid.ColumnSpan="2" >
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Engine" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="EngineAllSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" TickPlacement="Both" ValueChanged="EngineAllSliderUpdated"/>
+                    <TextBox x:Name="EngineAllTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Car" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="CarAllSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TickPlacement="Both" ValueChanged="CarAllSliderUpdated"/>
+                    <TextBox x:Name="CarAllTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="0" Header="Utilities" Grid.Row="2" Grid.ColumnSpan="2" >
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Copy from clipboard" Margin="50,0" Height="30" Click="LoadTPFromClipboard"/>
+                <Button Content="Paste to clipboard" Margin="50,0" Grid.Column="1" Height="30" Click="PushToClipboard"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
