@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -138,6 +139,46 @@ namespace TechBoard
             {
                 s.Value = slider.Value;
             }
+        }
+        private void EnginePlusAllSliderUpdated(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsInitialized)
+                return;
+            Slider slider = sender as Slider;
+            EnginePlusAllTextBox.Text = slider.Value <= 0 ? Math.Round(slider.Value, 0).ToString() : "+" + Math.Round(slider.Value, 0).ToString();
+        }
+        private void EnginePlusAllSliderUp(object sender, DragCompletedEventArgs e)
+        {
+            if (!IsInitialized)
+                return;
+            Slider slider = sender as Slider;
+
+            foreach (Slider s in _engineSliders)
+            {
+                s.Value = Math.Max(0, Math.Min(15, Math.Round(s.Value, 0) + Math.Round(slider.Value, 0)));
+            }
+
+            slider.Value = 0;
+        }
+        private void CarPlusAllSliderUpdated(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsInitialized)
+                return;
+            Slider slider = sender as Slider;
+            CarPlusAllTextBox.Text = slider.Value <= 0 ? Math.Round(slider.Value, 0).ToString() : "+" + Math.Round(slider.Value, 0).ToString();
+        }
+        private void CarPlusAllSliderUp(object sender, DragCompletedEventArgs e)
+        {
+            if (!IsInitialized)
+                return;
+            Slider slider = sender as Slider;
+
+            foreach (Slider s in _carSliders)
+            {
+                s.Value = Math.Max(0, Math.Min(15, Math.Round(s.Value, 0) + Math.Round(slider.Value, 0)));
+            }
+
+            slider.Value = 0;
         }
 
         private void LoadTPFromClipboard(object sender, RoutedEventArgs e)

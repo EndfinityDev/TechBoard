@@ -229,6 +229,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
 
                 <Grid Grid.Column="0">
                     <Grid.ColumnDefinitions>
@@ -250,6 +254,28 @@
                     <Label Grid.Column="0" Content="Car" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Slider Value="5" Minimum="0" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="CarAllSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TickPlacement="Both" ValueChanged="CarAllSliderUpdated"/>
                     <TextBox x:Name="CarAllTextBox" Grid.Column="2" Width="50" Text="+5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="+Engine" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Thumb.DragCompleted="EnginePlusAllSliderUp" Value="0" Minimum="-15" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="EnginePlusAllSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TickPlacement="Both" ValueChanged="EnginePlusAllSliderUpdated"/>
+                    <TextBox x:Name="EnginePlusAllTextBox" Grid.Column="2" Width="50" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="+Car" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Slider Thumb.DragCompleted="CarPlusAllSliderUp" Value="0" Minimum="-15" Maximum="15" SmallChange="1" LargeChange="1" Interval="1" x:Name="CarPlusAllSlider" Grid.Column="1" Width="100" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TickPlacement="Both" ValueChanged="CarPlusAllSliderUpdated"/>
+                    <TextBox x:Name="CarPlusAllTextBox" Grid.Column="2" Width="50" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"/>
                 </Grid>
 
             </Grid>
