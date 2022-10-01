@@ -61,9 +61,9 @@ namespace TechBoard
             _carSliders[(byte)CarTechpoolTypes.Body] = BodySlider;
             _carSliders[(byte)CarTechpoolTypes.Chassis] = ChassisSlider;
             _carSliders[(byte)CarTechpoolTypes.Interior] = InteriorSlider;
-            _carSliders[(byte)CarTechpoolTypes.Assists] = AssistsSlider;
+            _carSliders[(byte)CarTechpoolTypes.DriverAssists] = AssistsSlider;
             _carSliders[(byte)CarTechpoolTypes.Safety] = SafetySlider;
-            _carSliders[(byte)CarTechpoolTypes.Drivetrain] = DrivetrainSlider;
+            _carSliders[(byte)CarTechpoolTypes.DriveTrain] = DrivetrainSlider;
             _carSliders[(byte)CarTechpoolTypes.Tyres] = TyresSlider;
             _carSliders[(byte)CarTechpoolTypes.Brakes] = BrakesSlider;
             _carSliders[(byte)CarTechpoolTypes.Aerodynamics] = AeroSlider;
@@ -73,9 +73,9 @@ namespace TechBoard
             _carTextBoxes[(byte)CarTechpoolTypes.Body] = BodyTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Chassis] = ChassisTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Interior] = InteriorTextBox;
-            _carTextBoxes[(byte)CarTechpoolTypes.Assists] = AssistsTextBox;
+            _carTextBoxes[(byte)CarTechpoolTypes.DriverAssists] = AssistsTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Safety] = SafetyTextBox;
-            _carTextBoxes[(byte)CarTechpoolTypes.Drivetrain] = DrivetrainTextBox;
+            _carTextBoxes[(byte)CarTechpoolTypes.DriveTrain] = DrivetrainTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Tyres] = TyresTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Brakes] = BrakesTextBox;
             _carTextBoxes[(byte)CarTechpoolTypes.Aerodynamics] = AeroTextBox;

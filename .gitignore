@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Builds/_Distribution/TechBoard.x64.exe
+/Builds/_Distribution/TechBoard.x86.exe
