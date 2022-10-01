@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -237,6 +238,18 @@ namespace TechBoard
             }
 
             ClipboardManager.Instance.PushToClipboard(ref engineTP, ref carTP);
+        }
+
+        private void JoinDiscordButton(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start("https://discord.com/invite/b9pFVJFH2r");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("https://discord.com/invite/b9pFVJFH2r", "Link");
+            }
         }
     }
 }
